@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emphasis Agência | Marketing Gastronômico de Alto Impacto</title>
+    <meta name="description" content="Transforme seu restaurante em uma máquina de vendas com o Método Menu Magnético. Assessoria 360 para negócios que faturam acima de R$ 40 mil.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="assets/img/brand/logo.png" alt="Emphasis Agência Logo" class="logo-img">
+            </a>
+            <nav class="nav-links">
+                <a href="#metodo">Método</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="javascript:void(0)" class="btn btn-primary btn-sm btn-desktop open-modal">Diagnóstico Gratuito</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="#home">Início</a>
+            <a href="#metodo">O Método</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#faq">FAQ</a>
+            <a href="javascript:void(0)" class="btn btn-primary open-modal">Diagnóstico Gratuito</a>
+        </nav>
+    </div>
+
+    <!-- Diagnosis Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-header">
+                <h3>Solicitar Diagnóstico <span class="highlight">Gratuito</span></h3>
+                <p>Preencha os dados abaixo para direcionarmos seu atendimento.</p>
+            </div>
+            <form id="diagnosisForm" class="diagnosis-form">
+                <div class="form-group">
+                    <label for="restaurantName">Nome do Restaurante</label>
+                    <input type="text" id="restaurantName" placeholder="Ex: Sabor Tropical" required>
+                </div>
+                <div class="form-group">
+                    <label for="instagramHandle">Instagram (@perfil)</label>
+                    <input type="text" id="instagramHandle" placeholder="Ex: @sabortropical" required>
+                </div>
+                <div class="form-group">
+                    <label for="monthlyRevenue">Faturamento Mensal</label>
+                    <select id="monthlyRevenue" required>
+                        <option value="" disabled selected>Selecione uma faixa</option>
+                        <option value="R$ 60k - R$ 100k">R$ 60k - R$ 100k</option>
+                        <option value="R$ 100k - R$ 250k">R$ 100k - R$ 250k</option>
+                        <option value="R$ 250k - R$ 500k">R$ 250k - R$ 500k</option>
+                        <option value="Acima de R$ 500k">Acima de R$ 500k</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Prosseguir para WhatsApp <i class="fas fa-chevron-right"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="javascript:void(0)" class="whatsapp-float open-modal" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Consultar Agora</span>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge">Especialistas em Food Marketing</div>
+                <h1>Sua operação gastronômica fatura mais de <span class="highlight">R$ 60 mil</span>, mas seu marketing ainda é amador?</h1>
+                <p>Conheça o <strong>MÉTODO MENU MAGNÉTICO</strong>: a assessoria 360 que transforma o visual do seu negócio em uma máquina de vendas real.</p>
+                <div class="hero-btns">
+                    <a href="javascript:void(0)" class="btn btn-primary main-cta open-modal">Quero meu diagnóstico gratuito <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/img/hero.png" alt="Prato Gourmet Premium" class="reveal-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-grid">
+                <div class="proof-item">
+                    <span class="number">+30</span>
+                    <span class="label">Marcas nos últimos 4 anos</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <span class="number">+150M</span>
+                    <span class="label">Visualizações</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <span class="number">100%</span>
+                    <span class="label">Foco Food Service</span>
+                </div>
+            </div>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <div class="logo-slide"><img src="assets/img/logos/75burguer.jpg" alt="75 Burguer"> <span>75 Burguer</span></div>
+                    <div class="logo-slide"><img src="assets/img/logos/bendito.jpg" alt="Bendito Nordestino"> <span>Bendito Nordestino</span></div>
+                    <div class="logo-slide"><img src="assets/img/logos/pastel.jpg" alt="Pastel D'ahora"> <span>Pastel D'ahora</span></div>
+                    <div class="logo-slide"><img src="assets/img/logos/hannas.jpg" alt="Hanna's"> <span>Hanna's Restaurante</span></div>
+                    <div class="logo-slide"><img src="assets/img/logos/donamaria.jpg" alt="Dona Maria"> <span>Dona Maria Pratinhos</span></div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="logo-slide"><img src="assets/img/logos/75burguer.jpg" alt="75 Burguer"> <span>75 Burguer</span></div>
+                    <div class="logo-slide"><img src="assets/img/logos/bendito.jpg" alt="Bendito Nordestino"> <span>Bendito Nordestino</span></div>
+                    <div class="logo-slide"><img src="assets/img/logos/pastel.jpg" alt="Pastel D'ahora"> <span>Pastel D'ahora</span></div>
+                    <div class="logo-slide"><img src="assets/img/logos/hannas.jpg" alt="Hanna's"> <span>Hanna's Restaurante</span></div>
+                    <div class="logo-slide"><img src="assets/img/logos/donamaria.jpg" alt="Dona Maria"> <span>Dona Maria Pratinhos</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Method Section -->
+    <section class="method" id="metodo">
+        <div class="container">
+            <div class="section-header">
+                <h2>O MÉTODO <span class="highlight">MENU MAGNÉTICO</span></h2>
+                <p>O conceito central: sua vitrine digital é onde a experiência do cliente começa.</p>
+            </div>
+            
+            <div class="method-detailed-grid">
+                <!-- Pillar 1: Branding -->
+                <div class="method-pillar">
+                    <div class="pillar-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>1. Branding</h3>
+                    </div>
+                    <p class="pillar-subtitle">Quem a marca é!</p>
+                    <ul class="pillar-list">
+                        <li><strong>Identidade e Essência:</strong> O branding define a personalidade do restaurante, tornando-o a "escolha óbvia".</li>
+                        <li><strong>Comunicação Diferenciada:</strong> Foco estratégico na forma como o produto é comunicado para gerar valor.</li>
+                        <li><strong>Sair da Invisibilidade:</strong> O alicerce para tirar o negócio do mar da invisibilidade digital.</li>
+                    </ul>
+                </div>
+                
+                <!-- Pillar 2: Atenção -->
+                <div class="method-pillar">
+                    <div class="pillar-header">
+                        <i class="fas fa-magnet"></i>
+                        <h3>2. Atenção</h3>
+                    </div>
+                    <p class="pillar-subtitle">Conteúdos Magnéticos</p>
+                    <ul class="pillar-list">
+                        <li><strong>Conteúdo Irresistível:</strong> Materiais audiovisuais feitos para interromper o consumo passivo.</li>
+                        <li><strong>Linha Editorial:</strong> Cada postagem com intenção clara: atrair ou quebrar objeções.</li>
+                        <li><strong>Influenciadores:</strong> Parcerias para gerar prova social rápida e alcance orgânico confiável.</li>
+                    </ul>
+                </div>
+                
+                <!-- Pillar 3: Desejo -->
+                <div class="method-pillar">
+                    <div class="pillar-header">
+                        <i class="fas fa-fire"></i>
+                        <h3>3. Desejo</h3>
+                    </div>
+                    <p class="pillar-subtitle">O "Food Porn" que captura</p>
+                    <ul class="pillar-list">
+                        <li><strong>Técnica Real Food:</strong> Fotos e vídeos profissionais que valorizam ingredientes e o preparo.</li>
+                        <li><strong>Narrativa Visual:</strong> Foco na "primeira garfada", transformando imagem em ferramenta de desejo.</li>
+                        <li><strong>Apetite Visual:</strong> Extremo apelo visual para despertar a fome imediata no usuário.</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 4: Tráfego -->
+                <div class="method-pillar">
+                    <div class="pillar-header">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>4. Tráfego</h3>
+                    </div>
+                    <p class="pillar-subtitle">Onde o ciclo se completa</p>
+                    <ul class="pillar-list">
+                        <li><strong>Segmentação Hiper-local:</strong> Foco em raios estratégicos (5,5 km) para quem realmente pode comprar.</li>
+                        <li><strong>Estudo de Mercado:</strong> Análise de concorrência e público para formular a oferta ideal.</li>
+                        <li><strong>Remarketing e Retenção:</strong> Reimpacto de interessados e estímulo à recorrência de clientes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Authority Quote Section -->
+    <section class="authority-quote">
+        <div class="container quote-grid">
+            <div class="quote-content">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <h2 class="main-quote">"Sua comida pode ser boa, mas se você não comunica isso, seu restaurante irá continuar vazio."</h2>
+                <div class="quote-author">
+                    <h3>Eduarda Freire</h3>
+                    <p>Publicitária, Especialista em Food Marketing e Fundadora da Emphasis. Há mais de 4 anos transformando a comunicação de restaurantes.</p>
+                </div>
+            </div>
+            <div class="quote-image">
+                <div class="founder-img-wrapper">
+                    <img src="assets/img/founder/eduarda_founder.jpg" alt="Eduarda Freire - Fundadora da Emphasis">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Filter Section -->
+    <section class="filter">
+        <div class="container">
+            <div class="filter-box">
+                <div class="filter-content">
+                    <h2>Para quem é a <span class="emphasis-text">Emphasis</span>?</h2>
+                    <p>Atendemos exclusivamente negócios gastronômicos validados com faturamento mensal superior a <strong>R$ 60 mil</strong>. Focamos em escala para quem já está no jogo.</p>
+                </div>
+                <div class="filter-action">
+                    <a href="javascript:void(0)" class="btn btn-outline open-modal">Verificar disponibilidade <i class="fas fa-check-circle"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Especialização técnica para cada pilar do seu crescimento digital.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Tráfego Pago</h4>
+                    <p>Dominamos Meta e Google Ads focados em conversão direta para delivery e reservas.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-camera-retro"></i></div>
+                    <h4>Produção Audiovisual</h4>
+                    <p>Conteúdo Visual Premium com foco em "Apetite Appeal" para Reels e anúncios.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+                    <h4>Gestão de Redes</h4>
+                    <p>Posicionamento de marca e gestão estratégica de comunidades no Instagram e TikTok.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                    <h4>Gestão de Cardápios</h4>
+                    <p>Otimização técnica de cardápios digitais para maximizar a lucratividade de cada pedido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dúvidas Frequentes</h2>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Depois de quanto tempo vejo resultados? <i class="fas fa-chevron-down"></i></button>
+                    <div class="accordion-content">
+                        <p>O tempo médio para maturação das campanhas e coleta de dados iniciais é de 90 a 180 dias para resultados consistentes e previsíveis.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Qual o investimento mínimo em anúncios? <i class="fas fa-chevron-down"></i></button>
+                    <div class="accordion-content">
+                        <p>Recomendamos um investimento mínimo inicial para que as ferramentas de IA das plataformas possam otimizar e encontrar seu público ideal com eficiência.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Atendem apenas restaurantes? <i class="fas fa-chevron-down"></i></button>
+                    <div class="accordion-content">
+                        <p>Atendemos todo o setor de Food Service: restaurantes, deliveries, dark kitchens e franquias gastronômicas ja validadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="assets/img/brand/logo.png" alt="Emphasis Logo" class="logo-img" style="height: 60px;">
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/emphasisagencia/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="javascript:void(0)" class="whatsapp-link open-modal"><i class="fab fa-whatsapp"></i> Falar com um consultor</a>
+            </div>
+            <p class="copyright">&copy; 2024 Emphasis Agência. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
