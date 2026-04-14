@@ -87,27 +87,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple Scroll Reveal Animation
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    // Section-based Scroll Reveal Animation
+    const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('section-active');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.2 });
 
-    const revealElements = document.querySelectorAll('.method-card, .service-item, .reveal-img');
-    revealElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
-        observer.observe(el);
+    // Observe all main sections
+    document.querySelectorAll('section').forEach(section => {
+        sectionObserver.observe(section);
     });
+
+    // Special case: Hero section should animate immediately or almost immediately
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        setTimeout(() => hero.classList.add('section-active'), 100);
+    }
 
     // Navbar Scroll Background
     window.addEventListener('scroll', () => {
